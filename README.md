@@ -10,3 +10,4 @@ Proof of knowledge for work
 - [] Demonstrate on a call that you understand how to edit and then execute a Python or Bash script via the command line
 - [] Demonstrate that you can write a basic dockerfile to run with docker-compose.yml
 - [] Demonstrate you understand the basic usage of yaml file and why formatting is important with yaml files
+- [] Test1
