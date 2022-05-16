@@ -1,0 +1,22 @@
+<footer class="main-footer">
+    <div class="container main-footer-container">
+        <h3 class="band-name">Andy and the Blankets</h3>
+        <ul class="nav footer-nav">
+            <li>
+                <a href="https://youtube.com" target="_blank">
+                    <img src="pics/YouTube Logo.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.spotify.com" target="_blank">
+                    <img src="pics/Spotify Logo.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="pics/Facebook Logo.png">
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
