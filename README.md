@@ -10,3 +10,4 @@ Proof of knowledge for work
 - [x] Demonstrate that you can write a basic dockerfile to run with docker-compose.yml
 - [x] Demonstrate that you can spin up a docker container from a docker image
 - [x] Demonstrate you understand the basic usage of yaml file and why formatting is important with yaml files
+Mike's edit
