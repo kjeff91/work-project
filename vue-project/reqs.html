@@ -2,47 +2,68 @@
 <html>
 
 <head>
-    <title>Computed Variables</title>
+    <title>Andy Morenz-Jeffries</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
+<header>
+    <div class="bg-img">
+        <div class="container">
+            <div class="topnav">
+                <a href="index.html">Home</a>
+                <a href="andy.html">Andy</a>
+                <a href="reqs.html">Reqs</a>
+                <a href="test.html">Test page</a>
+            </div>
+        </div>
+    </div>
+    <h1>Computed Variables</h1>
+</header>
+
 <body>
-    <header>
-        <div class="bg-img">
-            <div class="container">
-                <div class="topnav">
-                    <a href="index.html">Home</a>
-                    <a href="andy.html">Andy</a>
-                    <a href="reqs.html">Reqs</a>
+    <div id="app" class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Hello {{fullname}}</h1>
+                <ul class="text-left">
+                    <li>First Name: {{first}}</li>
+                    <li>Last Name: {{last}}</li>
+                </ul>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>First Name:</label>
+                    <input type="text" class="form-control" v-model="first" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Last Name:</label>
+                    <input type="text" class="form-control" v-model="last" />
                 </div>
             </div>
         </div>
-        <h1>Computed Variables</h1>
-    </header>
-
-
-    <footer class="footer">
-        <div>
-            <h3 class="footer-title">Mike's WebDev Project</h3>
-            <ul class="footer-nav">
-                <li>
-                    <a href="https://youtube.com" target="_blank">
-                        <img src="pics/YouTube Logo.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.spotify.com" target="_blank">
-                        <img src="pics/Spotify Logo.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="pics/Facebook Logo.png">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
+    </div>
 </body>
+
+<script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            first: '',
+            last: ''
+        },
+        computed: {
+            fullname: function () {
+                return this.first + " " + this.last
+            }
+        }
+    })
+</script>
 
 </html>
