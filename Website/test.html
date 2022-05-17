@@ -6,68 +6,33 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
-    <header>
-        <div class="bg-img">
-            <div class="container">
-                <div class="topnav">
-                    <a href="index.html">Home</a>
-                    <a href="andy.html">Andy</a>
-                    <a href="reqs.html">Reqs</a>
-                    <a href="test.html">Test page</a>
-                </div>
+<header>
+    <div class="bg-img">
+        <div class="container">
+            <div class="topnav">
+                <a href="index.html">Home</a>
+                <a href="andy.html">Andy</a>
+                <a href="reqs.html">Reqs</a>
+                <a href="test.html">Test page</a>
+                </a>
             </div>
         </div>
-        <h1 class="h1">Andy Morenz-Jeffries</h1>
-    </header>
-    <section>
-        <h2 class="h2">ABOUT</h2>
-        <img class="main-pic" src="pics/Andy.jpg">
+    </div>
+    <h1>Computed Variables</h1>
+</header>
 
-        <div id="vue-start">
-            <h2>{{ headerText }}</h2>
-            <button v-on:click="changeText">Pat Andy</button>
-        </div>
+<script src="https://unpkg.com/vue@3"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-        <script>
-            new Vue({
-                el: "#vue-start",
-                data: {
-                    headerText: "Give Andy some head pats!"
-                },
-                methods: {
-                    changeText() {
-                        this.headerText = "Andy loved that!"
-                    }
-                }
-            })
-        </script>
+<div id="app">{{ message }}</div>
 
-    </section>
-    <hr>
-    <footer class="footer">
-        <div>
-            <h3 class="footer-title">Mike's WebDev Project</h3>
-            <ul class="footer-nav">
-                <li>
-                    <a href="https://youtube.com" target="_blank">
-                        <img src="pics/YouTube Logo.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.spotify.com" target="_blank">
-                        <img src="pics/Spotify Logo.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="pics/Facebook Logo.png">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-</body>
+<script>
+    const { createApp } = Vue
 
-</html>
+    createApp({
+        data() {
+            return {
+                message: 'Hello Vue!'
+            }
+        }
+    }).mount('#app')
+</script>
